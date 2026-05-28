@@ -78,16 +78,20 @@ SPDR-Net achieves **State-of-the-Art (SOTA)** performance across multiple public
 
 ### 2. Installation
 Clone the repository and install the required dependencies:
+```
 git clone https://github.com/dongpeng011/SD-ReID.git
 cd SD-ReID
+```
 
 # Create conda environment (Optional but recommended)
+```
 conda create -n spdr python=3.8 -y
 conda activate spdr
-
+```
+```
 # Install dependencies
 pip install -r requirements.txt
-
+```
 
 ### 3. Data Preparation
 

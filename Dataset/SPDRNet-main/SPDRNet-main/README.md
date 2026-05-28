@@ -20,9 +20,9 @@
 ---
 
 ## 📢 News
-- **[🎉 2024/05]** The source code of **SPDR-Net** is officially released! 
-- **[🔥 2024/05]** Our self-built challenging street-scene dataset **SD-ReID** is now publicly available!
-- **[🚀 2024/05]** Supported YOLO-based closed-loop ReID deployment pipeline for real-world surveillance.
+- **[🎉 2026/03]** The source code of **SPDR-Net** is officially released! 
+- **[🔥 2026/04]** Our self-built challenging street-scene dataset **SD-ReID** is now publicly available!
+- **[🚀 2026/05]** Supported YOLO-based closed-loop ReID deployment pipeline for real-world surveillance.
 
 ---
 
@@ -61,4 +61,68 @@ SPDR-Net/
 │   ├── market1501/
 │   ├── msmt17/
 │   └── ...
+```
+---
+## 🛠️ Environment Setup
+We recommend using Linux (Ubuntu 22.04), Python >= 3.8, and PyTorch >= 2.0 (CUDA 12.1).
+Clone this repository and install the dependencies:
+# Clone the repository
+git clone https://github.com/dongpeng011/SD-ReID.git
+cd SD-ReID
 
+# Create a conda environment
+conda create -n spdr python=3.8 -y
+conda activate spdr
+
+# Install PyTorch
+conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.8 -c pytorch -c nvidia
+
+# Install other requirements
+pip install -r requirements.txt
+(Note: Our environment setup is heavily inspired by the excellent TransReID.)
+---
+
+---
+## 🚀 Getting Started
+### 1. Training SPDR-Net
+To train the SPDR-Net model on the SD-ReID dataset, simply run:
+```
+python train.py --config configs/sd_reid.yml \
+                MODEL.DEVICE_ID "0" \
+                SOLVER.MAX_EPOCHS 60 \
+                OUTPUT_DIR "./logs/sd_reid_spdr_net"
+```
+(Tip: You can easily switch to other datasets like configs/market1501.yml or configs/occ_duke.yml)
+
+## 2. Evaluation
+To evaluate a trained model, use the following command:
+```
+python test.py --config configs/sd_reid.yml \
+               TEST.WEIGHT "./logs/sd_reid_spdr_net/best_model.pth" \
+               MODEL.DEVICE_ID "0"
+```
+---
+
+## 📊 Main Results
+SPDR-Net sets new state-of-the-art performances across multiple challenging scenarios!
+```
+Dataset	mAP (%)	Rank-1 (%)	Config	Weight
+SD-ReID (Ours)	99.0	99.9	sd_reid.yml	Google Drive
+Occ-Duke	62.1	75.6	occ_duke.yml	Google Drive
+MSMT17	42.3	66.4	msmt17.yml	Google Drive
+PRCC	53.1	40.3	prcc.yml	Google Drive
+```
+
+## 📖 Citation
+If you find this code, the SD-ReID dataset, or our ideas useful in your research, please consider citing our paper:
+```
+@article{SPDRNet2024,
+  title={Scene-Prompt-Driven Dynamic Routing Expert Network for Open-World Person Re-Identification},
+  author={Your Name and Co-authors},
+  journal={Under Review},
+  year={2024}
+}
+```
+
+## 🤝 Acknowledgements
+We would like to thank the open-source community, particularly the authors of TransReID and timm for their excellent codebases.
