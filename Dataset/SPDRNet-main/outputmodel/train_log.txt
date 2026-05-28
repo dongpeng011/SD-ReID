@@ -1,0 +1,160 @@
+2025-09-17 16:39:35,869 VersReID INFO: Saving model in the path :/root/autodl-tmp/VersReID-main/outputmodel
+2025-09-17 16:39:35,869 VersReID INFO: Namespace(config_file='', opts=[], local_rank=0)
+2025-09-17 16:39:35,870 VersReID INFO: Running with config:
+DATALOADER:
+  COMBINE_SAMPLER: scene_balance
+  NUM_INSTANCE: 16
+  NUM_WORKERS: 16
+  SAMPLER: softmax_triplet
+DATASETS:
+  COMBINE_NAMES: ['market1501', 'msmt17']
+  COMBINE_PID: True
+  COMBINE_TYPE: [0, 0]
+  NAMES: combine
+  ROOTS: ['/root/autodl-tmp/data/market1501', '/root/autodl-tmp/data/MSMT17']
+INPUT:
+  AUTO_AUG: False
+  GB_PROB: 0.0
+  GCJ_PROB: 0.0
+  GGS_PROB: 0.0
+  LB_PROB: 0.0
+  LCJ_PROB: 0.0
+  LGS_PROB: 0.0
+  PADDING: 10
+  PIXEL_MEAN: [0.485, 0.456, 0.406]
+  PIXEL_STD: [0.229, 0.224, 0.225]
+  PROB: 0.5
+  RE_PROB: 0.5
+  SIZE_TEST: [384, 128]
+  SIZE_TRAIN: [384, 128]
+MODEL:
+  ATT_DROP_RATE: 0.0
+  AUX_LOSS: False
+  AUX_PROMPT_NUMS: 0
+  BLOCK_WARMUP_EPOCHS: -1
+  COS_LAYER: False
+  DECOUPLE_RATIO: 0.6
+  DEVICE: cuda
+  DEVICE_ID: 0
+  DEVIDE_LENGTH: 4
+  DIST_TRAIN: False
+  DROP_OUT: 0.0
+  DROP_PATH: 0.1
+  EMA: False
+  EMA_M: 0.999
+  EMA_S: 1
+  ID_LOSS_TYPE: softmax
+  ID_LOSS_WEIGHT: 1.0
+  IF_LABELSMOOTH: on
+  IF_WITH_CENTER: no
+  JPM: False
+  LAST_STRIDE: 1
+  METRIC_LOSS_TYPE: triplet
+  MULTI_SCENES: True
+  NAME: resnet50
+  NECK: bnneck
+  NO_MARGIN: False
+  PRETRAIN_CHOICE: imagenet
+  PRETRAIN_PATH: /root/autodl-tmp/VersReID-main/VersReID-main/ckpts/dino_mpda_vit_b_lupb.pth
+  RE_ARRANGE: True
+  SCENE_PROMPT_NUMS: 0
+  SCENE_PROMPT_TYPE: 0
+  SHIFT_NUM: 5
+  SHUFFLE_GROUP: 2
+  SIE_CAMERA: False
+  SIE_COE: 3.0
+  SIE_VIEW: False
+  STRIDE_SIZE: [16, 16]
+  STU: False
+  TRANSFORMER_TYPE: vit_base_patch16_224_TransReID
+  TRIPLET_LOSS_WEIGHT: 1.0
+  TYPE: TR
+  USE_FEATURE_DECOUPLING: True
+OUTPUT_DIR: /root/autodl-tmp/VersReID-main/outputmodel
+SOLVER:
+  AUX_LOSS_TYPE: L2
+  AUX_LOSS_WEIGHT: 0.0
+  BASE_LR: 0.0003
+  BIAS_LR_FACTOR: 1
+  CENTER_LOSS_WEIGHT: 0.0005
+  CENTER_LR: 0.5
+  CHECKPOINT_PERIOD: 10
+  COSINE_MARGIN: 0.5
+  COSINE_SCALE: 30
+  END_EPOCHS: -1
+  EVAL_PERIOD: 10
+  GAMMA: 0.1
+  IMS_PER_BATCH: 64
+  LARGE_FC_LR: False
+  LOG_PERIOD: 100
+  MARGIN: 0.3
+  MAX_EPOCHS: 60
+  MIN_LR: 0.0
+  MOMENTUM: 0.9
+  OPTIMIZER_NAME: Adam
+  SEED: 1234
+  STEPS: (40, 70)
+  WARMUP_EPOCHS: 5
+  WARMUP_FACTOR: 0.01
+  WARMUP_METHOD: linear
+  WEIGHT_DECAY: 0.0005
+  WEIGHT_DECAY_BIAS: 0.0005
+TEST:
+  ASSIGN_SCENE: -1
+  DIST_MAT: dist_mat.npy
+  EVAL: False
+  FEAT_NORM: yes
+  IMS_PER_BATCH: 128
+  NECK_FEAT: after
+  RE_RANKING: False
+  WEIGHT: 
+2025-09-17 16:39:38,711 VersReID.train INFO: start training
+2025-09-17 16:39:55,593 VersReID.train INFO: Epoch[1] Iteration[100/643] Reid Loss: 11.205, Reid Acc: 0.003, Base Lr: 6.24e-05
+2025-09-17 16:40:09,813 VersReID.train INFO: Epoch[1] Iteration[200/643] Reid Loss: 9.751, Reid Acc: 0.006, Base Lr: 6.24e-05
+2025-09-17 16:40:24,247 VersReID.train INFO: Epoch[1] Iteration[300/643] Reid Loss: 9.186, Reid Acc: 0.011, Base Lr: 6.24e-05
+2025-09-17 16:40:38,397 VersReID.train INFO: Epoch[1] Iteration[400/643] Reid Loss: 8.895, Reid Acc: 0.013, Base Lr: 6.24e-05
+2025-09-17 16:40:52,575 VersReID.train INFO: Epoch[1] Iteration[500/643] Reid Loss: 8.709, Reid Acc: 0.019, Base Lr: 6.24e-05
+2025-09-17 16:41:07,175 VersReID.train INFO: Epoch[1] Iteration[600/643] Reid Loss: 8.567, Reid Acc: 0.034, Base Lr: 6.24e-05
+2025-09-17 16:41:13,727 VersReID.train INFO: Epoch 1 done. Time per epoch: 94.941[s]
+2025-09-17 16:41:29,759 VersReID.train INFO: Epoch[2] Iteration[100/643] Reid Loss: 7.852, Reid Acc: 0.014, Base Lr: 1.22e-04
+2025-09-17 16:41:43,884 VersReID.train INFO: Epoch[2] Iteration[200/643] Reid Loss: 7.825, Reid Acc: 0.018, Base Lr: 1.22e-04
+2025-09-17 16:41:57,986 VersReID.train INFO: Epoch[2] Iteration[300/643] Reid Loss: 7.777, Reid Acc: 0.023, Base Lr: 1.22e-04
+2025-09-17 16:42:12,283 VersReID.train INFO: Epoch[2] Iteration[400/643] Reid Loss: 7.752, Reid Acc: 0.024, Base Lr: 1.22e-04
+2025-09-17 16:42:26,644 VersReID.train INFO: Epoch[2] Iteration[500/643] Reid Loss: 7.699, Reid Acc: 0.033, Base Lr: 1.22e-04
+2025-09-17 16:42:40,853 VersReID.train INFO: Epoch[2] Iteration[600/643] Reid Loss: 7.625, Reid Acc: 0.046, Base Lr: 1.22e-04
+2025-09-17 16:42:46,999 VersReID.train INFO: Epoch 2 done. Time per epoch: 93.271[s]
+2025-09-17 16:43:02,682 VersReID.train INFO: Epoch[3] Iteration[100/641] Reid Loss: 7.349, Reid Acc: 0.027, Base Lr: 1.81e-04
+2025-09-17 16:43:17,134 VersReID.train INFO: Epoch[3] Iteration[200/641] Reid Loss: 7.312, Reid Acc: 0.030, Base Lr: 1.81e-04
+2025-09-17 16:43:31,287 VersReID.train INFO: Epoch[3] Iteration[300/641] Reid Loss: 7.252, Reid Acc: 0.036, Base Lr: 1.81e-04
+2025-09-17 16:43:45,725 VersReID.train INFO: Epoch[3] Iteration[400/641] Reid Loss: 7.210, Reid Acc: 0.042, Base Lr: 1.81e-04
+2025-09-17 16:44:00,386 VersReID.train INFO: Epoch[3] Iteration[500/641] Reid Loss: 7.117, Reid Acc: 0.051, Base Lr: 1.81e-04
+2025-09-17 16:44:14,832 VersReID.train INFO: Epoch[3] Iteration[600/641] Reid Loss: 7.003, Reid Acc: 0.066, Base Lr: 1.81e-04
+2025-09-17 16:44:20,753 VersReID.train INFO: Epoch 3 done. Time per epoch: 93.754[s]
+2025-09-17 16:44:36,816 VersReID.train INFO: Epoch[4] Iteration[100/642] Reid Loss: 6.766, Reid Acc: 0.038, Base Lr: 2.41e-04
+2025-09-17 16:44:51,721 VersReID.train INFO: Epoch[4] Iteration[200/642] Reid Loss: 6.757, Reid Acc: 0.046, Base Lr: 2.41e-04
+2025-09-17 16:45:06,164 VersReID.train INFO: Epoch[4] Iteration[300/642] Reid Loss: 6.711, Reid Acc: 0.056, Base Lr: 2.41e-04
+2025-09-17 16:45:20,284 VersReID.train INFO: Epoch[4] Iteration[400/642] Reid Loss: 6.658, Reid Acc: 0.066, Base Lr: 2.41e-04
+2025-09-17 16:45:34,412 VersReID.train INFO: Epoch[4] Iteration[500/642] Reid Loss: 6.591, Reid Acc: 0.078, Base Lr: 2.41e-04
+2025-09-17 16:45:48,973 VersReID.train INFO: Epoch[4] Iteration[600/642] Reid Loss: 6.460, Reid Acc: 0.098, Base Lr: 2.41e-04
+2025-09-17 16:45:54,928 VersReID.train INFO: Epoch 4 done. Time per epoch: 94.174[s]
+2025-09-17 16:46:09,818 VersReID.train INFO: Epoch[5] Iteration[100/641] Reid Loss: 6.429, Reid Acc: 0.058, Base Lr: 2.95e-04
+2025-09-17 16:46:23,934 VersReID.train INFO: Epoch[5] Iteration[200/641] Reid Loss: 6.341, Reid Acc: 0.068, Base Lr: 2.95e-04
+2025-09-17 16:46:38,169 VersReID.train INFO: Epoch[5] Iteration[300/641] Reid Loss: 6.289, Reid Acc: 0.076, Base Lr: 2.95e-04
+2025-09-17 16:46:52,270 VersReID.train INFO: Epoch[5] Iteration[400/641] Reid Loss: 6.236, Reid Acc: 0.091, Base Lr: 2.95e-04
+2025-09-17 16:47:06,342 VersReID.train INFO: Epoch[5] Iteration[500/641] Reid Loss: 6.166, Reid Acc: 0.104, Base Lr: 2.95e-04
+2025-09-17 16:47:20,430 VersReID.train INFO: Epoch[5] Iteration[600/641] Reid Loss: 6.046, Reid Acc: 0.129, Base Lr: 2.95e-04
+2025-09-17 16:47:26,249 VersReID.train INFO: Epoch 5 done. Time per epoch: 91.321[s]
+2025-09-17 16:47:41,427 VersReID.train INFO: Epoch[6] Iteration[100/643] Reid Loss: 5.836, Reid Acc: 0.091, Base Lr: 2.93e-04
+2025-09-17 16:47:55,555 VersReID.train INFO: Epoch[6] Iteration[200/643] Reid Loss: 5.771, Reid Acc: 0.094, Base Lr: 2.93e-04
+2025-09-17 16:48:09,781 VersReID.train INFO: Epoch[6] Iteration[300/643] Reid Loss: 5.736, Reid Acc: 0.107, Base Lr: 2.93e-04
+2025-09-17 16:48:24,066 VersReID.train INFO: Epoch[6] Iteration[400/643] Reid Loss: 5.675, Reid Acc: 0.121, Base Lr: 2.93e-04
+2025-09-17 16:48:38,352 VersReID.train INFO: Epoch[6] Iteration[500/643] Reid Loss: 5.577, Reid Acc: 0.142, Base Lr: 2.93e-04
+2025-09-17 16:48:52,557 VersReID.train INFO: Epoch[6] Iteration[600/643] Reid Loss: 5.447, Reid Acc: 0.173, Base Lr: 2.93e-04
+2025-09-17 16:48:58,686 VersReID.train INFO: Epoch 6 done. Time per epoch: 92.437[s]
+2025-09-17 16:49:13,505 VersReID.train INFO: Epoch[7] Iteration[100/643] Reid Loss: 5.089, Reid Acc: 0.175, Base Lr: 2.90e-04
+2025-09-17 16:49:27,625 VersReID.train INFO: Epoch[7] Iteration[200/643] Reid Loss: 5.053, Reid Acc: 0.177, Base Lr: 2.90e-04
+2025-09-17 16:49:41,782 VersReID.train INFO: Epoch[7] Iteration[300/643] Reid Loss: 5.030, Reid Acc: 0.182, Base Lr: 2.90e-04
+2025-09-17 16:49:55,909 VersReID.train INFO: Epoch[7] Iteration[400/643] Reid Loss: 4.995, Reid Acc: 0.195, Base Lr: 2.90e-04
+2025-09-17 16:50:09,959 VersReID.train INFO: Epoch[7] Iteration[500/643] Reid Loss: 4.952, Reid Acc: 0.210, Base Lr: 2.90e-04
+2025-09-17 16:50:24,043 VersReID.train INFO: Epoch[7] Iteration[600/643] Reid Loss: 4.874, Reid Acc: 0.237, Base Lr: 2.90e-04
+2025-09-17 16:50:30,502 VersReID.train INFO: Epoch 7 done. Time per epoch: 91.815[s]
