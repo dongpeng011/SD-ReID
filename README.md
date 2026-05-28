@@ -88,8 +88,9 @@ cd SD-ReID
 conda create -n spdr python=3.8 -y
 conda activate spdr
 ```
-```
+
 # Install dependencies
+```
 pip install -r requirements.txt
 ```
 
@@ -115,11 +116,14 @@ SD-ReID/
 ### 4. Training & Evaluation
 
 ## To train the SPDR-Net model on the SD-ReID dataset:
+```
 python train.py --config_file configs/sd_reid.yml MODEL.DEVICE_ID "('0')"
+```
 ## To evaluate a pre-trained model:
+```
 python test.py --config_file configs/sd_reid.yml MODEL.DEVICE_ID "('0')" \
                TEST.WEIGHT /path/to/your/best_model.pth
-
+```
 ---
 
 ## 💡 System Application (YOLO + SPDR-Net)
@@ -131,12 +135,14 @@ This repository is built upon the excellent open-source works of the computer vi
 
 ## 📝 Citation
 ## If you find our paper, code, or the SD-ReID dataset helpful in your research, please consider citing our work:
+```
 @article{SPDRNet2026,
   title={Scene-Prompt-Driven Dynamic Routing Expert Network for Open-World Person Re-Identification},
   author={Liu, Hongbin and Dong, Peng and others},
   journal={Under Review},
   year={2026}
 }
+```
 
 ## 📧 Contact
 If you have any questions, please feel free to open an issue or contact: liuhongbin19@sdjzu.edu.cn.
