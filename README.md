@@ -92,6 +92,7 @@ pip install -r requirements.txt
 ### 3. Data Preparation
 
 ## Download the SD-ReID dataset (and other public datasets if needed) and organize them in the data directory.
+```
 SD-ReID/
 ├── data/
 │   ├── SD-ReID/
@@ -106,7 +107,7 @@ SD-ReID/
 │   └── sd_reid.yml
 └── train.py
 (Note: Please ensure you modify the dataset root paths in your configuration files accordingly.)
-
+```
 ### 4. Training & Evaluation
 
 ## To train the SPDR-Net model on the SD-ReID dataset:
@@ -121,10 +122,10 @@ python test.py --config_file configs/sd_reid.yml MODEL.DEVICE_ID "('0')" \
 To demonstrate the engineering deployment value, we provide a closed-loop multi-camera surveillance testing script integrating the state-of-the-art YOLO detector and our SPDR-Net weights.
 (Visual results: SPDR-Net maintains cross-camera identity consistency perfectly even under severe overlap and occlusion.)
 
-### 🙌 6. Acknowledgement
+## 🙌 Acknowledgement
 This repository is built upon the excellent open-source works of the computer vision community, particularly TransReID and VersReID. We sincerely thank the original authors for their outstanding contributions to the ReID community.
 
-### 📝 7. Citation
+## 📝 Citation
 ## If you find our paper, code, or the SD-ReID dataset helpful in your research, please consider citing our work:
 @article{SPDRNet2026,
   title={Scene-Prompt-Driven Dynamic Routing Expert Network for Open-World Person Re-Identification},
@@ -133,5 +134,5 @@ This repository is built upon the excellent open-source works of the computer vi
   year={2026}
 }
 
-### 📧 8. Contact
+## 📧 Contact
 If you have any questions, please feel free to open an issue or contact: liuhongbin19@sdjzu.edu.cn.
