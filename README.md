@@ -21,9 +21,9 @@
 ---
 
 ## 📢 News & Updates
-- **[🔥 2024/11]** The official source code of **SPDR-Net** is now publicly available! 
-- **[🎉 2024/11]** Our self-built challenging street-scene dataset **SD-ReID** is released!
-- **[🚀 2024/11]** Supported YOLO-based closed-loop ReID deployment pipeline for real-world video surveillance.
+- **[🔥 2026/3]** The official source code of **SPDR-Net** is now publicly available! 
+- **[🎉 2026/4]** Our self-built challenging street-scene dataset **SD-ReID** is released!
+- **[🚀 2026/5]** Supported YOLO-based closed-loop ReID deployment pipeline for real-world video surveillance.
 
 ---
 
