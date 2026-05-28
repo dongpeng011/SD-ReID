@@ -88,7 +88,7 @@ conda activate spdr
 # Install dependencies
 pip install -r requirements.txt
 
----
+
 ### 3. Data Preparation
 
 ## Download the SD-ReID dataset (and other public datasets if needed) and organize them in the data directory.
@@ -115,7 +115,9 @@ python train.py --config_file configs/sd_reid.yml MODEL.DEVICE_ID "('0')"
 python test.py --config_file configs/sd_reid.yml MODEL.DEVICE_ID "('0')" \
                TEST.WEIGHT /path/to/your/best_model.pth
 
-### 💡 5. System Application (YOLO + SPDR-Net)
+---
+
+## 💡 System Application (YOLO + SPDR-Net)
 To demonstrate the engineering deployment value, we provide a closed-loop multi-camera surveillance testing script integrating the state-of-the-art YOLO detector and our SPDR-Net weights.
 (Visual results: SPDR-Net maintains cross-camera identity consistency perfectly even under severe overlap and occlusion.)
 
