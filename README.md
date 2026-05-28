@@ -12,7 +12,7 @@
 **Official PyTorch Implementation of SPDR-Net & The SD-ReID Benchmark Dataset**  
 *Tackling Spatially Asymmetric Interference via Mixture of Experts (MoE) & Dynamic Routing*
 
-<img src="./assets/architecture.png" width="90%" alt="SPDR-Net Framework">
+<img src="assets/architecture.png" width="90%" alt="SPDR-Net Framework">
 <br>
 *(Figure: The overall architecture of SPDR-Net, integrating Semantic Part Experts, Prompt-Guided Dynamic Routing, and Global-Local Fusion.)*
 
