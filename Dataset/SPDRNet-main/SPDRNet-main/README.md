@@ -104,14 +104,24 @@ python test.py --config configs/sd_reid.yml \
 ---
 
 ## 📊 Main Results
-SPDR-Net sets new state-of-the-art performances across multiple challenging scenarios!
-```
-Dataset	mAP (%)	Rank-1 (%)	Config	Weight
-SD-ReID (Ours)	99.0	99.9	sd_reid.yml	Google Drive
-Occ-Duke	62.1	75.6	occ_duke.yml	Google Drive
-MSMT17	42.3	66.4	msmt17.yml	Google Drive
-PRCC	53.1	40.3	prcc.yml	Google Drive
-```
+
+We evaluate **SPDR-Net** across various open-world challenges (Occlusion, Infrared, Clothing-changing, Low-resolution, and Real-street composite noise). The model consistently achieves State-Of-The-Art (SOTA) performance. 
+
+*Below are the results evaluated under the multi-scene/single-scene joint training paradigm:*
+
+| Challenge Category | Dataset | mAP (%) | Rank-1 (%) | Config File | Pre-trained Weights |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| 🏙️ **Real-Street (Ours)** | **SD-ReID** | **99.0** | **99.9** | [`sd_reid.yml`](./configs/sd_reid.yml) | [Google Drive](#) / [Baidu](#) |
+| 📦 **Severe Occlusion** | **Occ-Duke** | **62.1** | **75.6** | [`occ_duke.yml`](./configs/occ_duke.yml) | [Google Drive](#) / [Baidu](#) |
+| 👥 **Large-scale Normal** | **MSMT17** | **42.3** | **66.4** | [`msmt17.yml`](./configs/msmt17.yml) | [Google Drive](#) / [Baidu](#) |
+| 👥 **Standard Normal** | **Market-1501**| **82.7** | **93.4** | [`market1501.yml`](./configs/market1501.yml) | [Google Drive](#) / [Baidu](#) |
+| 👕 **Clothing-Changing**| **PRCC** | **53.1** | **40.3** | [`prcc.yml`](./configs/prcc.yml) | [Google Drive](#) / [Baidu](#) |
+| 👕 **Clothing-Changing**| **Celeb-ReID** | **8.4** | **50.4** | [`celeb_reid.yml`](./configs/celeb_reid.yml) | [Google Drive](#) / [Baidu](#) |
+| 🌙 **Infrared (Cross-modal)**| **SYSU-mm01** | **41.9** | **43.6** | [`sysu_mm01.yml`](./configs/sysu_mm01.yml) | [Google Drive](#) / [Baidu](#) |
+| 🔍 **Low-Resolution** | **MLR-CUHK03** | **87.7** | **91.9** | [`mlr_cuhk03.yml`](./configs/mlr_cuhk03.yml) | [Google Drive](#) / [Baidu](#) |
+
+> **Note:** The performance on SD-ReID demonstrates the extreme robustness of our dynamic routing mechanism against real-world spatially asymmetric interference. Detailed ablation studies and cross-domain zero-shot results can be found in our paper.
+
 
 ## 📖 Citation
 If you find this code, the SD-ReID dataset, or our ideas useful in your research, please consider citing our paper:
