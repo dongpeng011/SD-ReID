@@ -6,7 +6,7 @@
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C.svg?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 <br>
-[![Paper: Under Review](https://img.shields.io/badge/Paper-Under_Review-FFB000.svg?style=for-the-badge&logo=arxiv&logoColor=white)]()
+[![Paper: Mathematics 2026](https://img.shields.io/badge/Paper-Mathematics%202026-1F6FEB.svg?style=for-the-badge&logo=mdbook&logoColor=white)](https://doi.org/10.3390/math14152716)
 [![Dataset: SD-ReID](https://img.shields.io/badge/Dataset-SD--ReID-8A2BE2.svg?style=for-the-badge&logo=databricks&logoColor=white)](https://github.com/dongpeng011/SD-ReID)
 
 **Official PyTorch Implementation of SPDR-Net & The SD-ReID Benchmark Dataset**  
@@ -24,6 +24,7 @@
 - **[🔥 2026/3]** The official source code of **SPDR-Net** is now publicly available! 
 - **[🎉 2026/4]** Our self-built challenging street-scene dataset **SD-ReID** is released!
 - **[🚀 2026/5]** Supported YOLO-based closed-loop ReID deployment pipeline for real-world video surveillance.
+- **[📄 2026]** The paper is published in *Mathematics* 14(15), 2716 — [doi:10.3390/math14152716](https://doi.org/10.3390/math14152716).
 
 ---
 
@@ -134,15 +135,25 @@ To demonstrate the engineering deployment value, we provide a closed-loop multi-
 This repository is built upon the excellent open-source works of the computer vision community, particularly TransReID and VersReID. We sincerely thank the original authors for their outstanding contributions to the ReID community.
 
 ## 📝 Citation
-## If you find our paper, code, or the SD-ReID dataset helpful in your research, please consider citing our work:
-```
-@article{SPDRNet2026,
-  title={Scene-Prompt-Driven Dynamic Routing Expert Network for Open-World Person Re-Identification},
-  author={Liu, Hongbin and Dong, Peng and others},
-  journal={Under Review},
-  year={2026}
+## If you use the SD-ReID dataset, the SPDR-Net code, or find this work helpful, please cite the published paper:
+
+```bibtex
+@Article{Dong2026SPDRNet,
+  author  = {Dong, Peng and Liu, Hongbin and Guo, Xiuyi and Li, Jilong and Zhou, Yitong and Wang, Baoxu},
+  title   = {Scene-Prompt-Driven Dynamic Routing Expert Network for Open-World Person Re-Identification},
+  journal = {Mathematics},
+  year    = {2026},
+  volume  = {14},
+  number  = {15},
+  pages   = {2716},
+  doi     = {10.3390/math14152716}
 }
 ```
+
+**Plain text** — Dong, P.; Liu, H.; Guo, X.; Li, J.; Zhou, Y.; Wang, B.
+*Scene-Prompt-Driven Dynamic Routing Expert Network for Open-World Person
+Re-Identification.* Mathematics **2026**, 14(15), 2716.
+https://doi.org/10.3390/math14152716
 
 ## 📧 Contact
 If you have any questions, please feel free to open an issue or contact: liuhongbin19@sdjzu.edu.cn.
