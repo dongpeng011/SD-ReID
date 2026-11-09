@@ -84,20 +84,20 @@ git clone https://github.com/dongpeng011/SD-ReID.git
 cd SD-ReID
 ```
 
-# Create conda environment (Optional but recommended)
+**Create a conda environment (optional but recommended)**
 ```
 conda create -n spdr python=3.8 -y
 conda activate spdr
 ```
 
-# Install dependencies
+**Install dependencies**
 ```
 pip install -r requirements.txt
 ```
 
 ### 3. Data Preparation
 
-## Download the SD-ReID dataset (and other public datasets if needed) and organize them in the data directory.
+Download the SD-ReID dataset (and other public datasets if needed) and organise them in the data directory:
 ```
 SD-ReID/
 ├── data/
@@ -116,7 +116,7 @@ SD-ReID/
 ```
 ### 4. Training & Evaluation
 
-## To train the SPDR-Net model on the SD-ReID dataset:
+To train the SPDR-Net model on the SD-ReID dataset:
 ```
 python train.py --config_file configs/sd_reid.yml MODEL.DEVICE_ID "('0')"
 ```
@@ -135,7 +135,7 @@ To demonstrate the engineering deployment value, we provide a closed-loop multi-
 This repository is built upon the excellent open-source works of the computer vision community, particularly TransReID and VersReID. We sincerely thank the original authors for their outstanding contributions to the ReID community.
 
 ## 📝 Citation
-## If you use the SD-ReID dataset, the SPDR-Net code, or find this work helpful, please cite the published paper:
+If you use the SD-ReID dataset, the SPDR-Net code, or find this work helpful, please cite the published paper:
 
 ```bibtex
 @Article{Dong2026SPDRNet,
